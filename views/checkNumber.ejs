@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Check Number</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<style>
+    body {
+        background-color: #f8f9fa;
+        padding-top: 70px;
+    }
+    .container, .container-fluid {
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 30px 25px 25px 25px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        max-width: 500px;
+    }
+    @media (max-width: 576px) {
+        .container, .container-fluid {
+            padding: 15px 5px 15px 5px;
+            max-width: 100%;
+        }
+        h2 { font-size: 1.5rem; }
+    }
+    .navbar {
+        margin-bottom: 30px;
+    }
+    #qrCard {
+        display: none;
+        margin-top: 20px;
+    }
+    #qrCodeImage {
+        max-width: 200px;
+        height: auto;
+    }
+</style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+  <a class="navbar-brand" href="/">QR Code App</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item"><a class="nav-link" href="/">Register</a></li>
+      <li class="nav-item active"><a class="nav-link" href="/checkNumber">Check Number</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="container-fluid mt-4">
+    <h2 class="mb-4 text-center">Check Number</h2>
+    <!-- Feedback message placeholder -->
+    <div id="feedback" class="alert d-none" role="alert"></div>
+    <form id="checkNumber">
+        <div class="form-row">
+            <div class="form-group col-12">
+                <label for="identificationNumber">Enter 6-digit number:</label>
+                <input type="text" id="identificationNumber" name="identificationNumber" maxlength="6" pattern="\d{6}" title="Please enter a 6-digit number" class="form-control" required>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Check Number</button>
+    </form>
+    <!-- QR Code Card -->
+    <div id="qrCard" class="card text-center">
+        <div class="card-body">
+            <h5 class="card-title">QR Code Result</h5>
+            <div id="qrCodeContainer"></div>
+            <button id="downloadQR" class="btn btn-outline-success mt-3">Download QR Code</button>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/js/script.js"></script>
+</body>
+</html> 
+
+

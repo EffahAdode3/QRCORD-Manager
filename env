@@ -1,0 +1,40 @@
+// 
+School Management Application Manual
+Introduction
+The School Management Application is a web-based application designed to improve data management systems in basic schools. It allows teachers to manage student information more efficiently, ultimately enhancing the learning experience.
+
+Getting Started
+System Requirements
+Node.js (v14 or higher)
+MySQL database
+Internet connection
+Installation
+Install dependencies: npm install
+Set up the database:
+Create a MySQL database named school_management
+Update the database configuration in config/config.json
+Configuration
+Update the config/config.json file with your database credentials.
+Using the Application
+Registering a User
+
+Navigate to the application's homepage.
+Fill in the registration form with the user's details.
+Click the "Register" button.
+An email containing the identification number will be sent to the provided email address.
+Checking User Information
+
+Navigate to the "Check Number" page.
+Enter the 6-digit identification number.
+Click the "Check Number" button.
+A QR code containing a Google search link for the identification number will be displayed.
+Troubleshooting
+Error: Internal Server Error
+This error may occur due to a misconfiguration in the database or server. Check the database configuration and server settings.
+Additional Resources
+Node.js Documentation
+MySQL Documentation
+Appendix
+Glossary
+Identification Number: A unique 6-digit number assigned to each user.
+QR Code: A machine-readable code consisting of an array of black and white squares, typically used for storing URLs or other information for reading by the camera on a smartphone.
