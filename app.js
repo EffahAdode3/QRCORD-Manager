@@ -10,7 +10,7 @@ import Admin from './model/admin.js';
 import bcrypt from 'bcryptjs';
 
 const app = express();
-const PORT =  4000;
+const PORT = process.env.PORT || 4000;
 
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: true }));
